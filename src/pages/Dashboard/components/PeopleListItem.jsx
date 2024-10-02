@@ -8,20 +8,28 @@ function PeopleListItem(props) {
 
   const pressedEdit = () => {
     console.log("pressed edit");
-    navigate("person/" + person.id)
-  }
+    navigate("person/" + person.id);
+  };
 
   return (
     <li>
       <h3>
         <li>
-          <Link to={`/person/${person.id}`}>
-            {person.name.first} {person.name.last}{" "}
-          </Link>
+          {person.wage || person.wage == 0 ? (
+            <p>
+              {person.name.first} {person.name.last}
+            </p>
+          ) : (
+            <Link to={`/person/${person.id}`}>
+              {person.name.first} {person.name.last}
+            </Link>
+          )}
         </li>
       </h3>
       {(person.wage || person.wage === 0) && <p>Wage: £{person.wage}</p>}
-      {(person.wage || person.wage === 0) && <button onClick={pressedEdit}>Edit</button>}
+      {(person.wage || person.wage === 0) && (
+        <button onClick={pressedEdit}>Edit</button>
+      )}
     </li>
   );
 }
