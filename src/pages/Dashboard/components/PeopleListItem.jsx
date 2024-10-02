@@ -8,14 +8,14 @@ function PeopleListItem(props) {
 
   const pressedEdit = () => {
     console.log("pressed edit");
-    navigate("/" + person.id)
+    navigate("person/" + person.id)
   }
 
   return (
     <li>
       <h3>
         <li>
-          <Link to={`/${person.id}`}>
+          <Link to={`/person/${person.id}`}>
             {person.name.first} {person.name.last}{" "}
           </Link>
         </li>
