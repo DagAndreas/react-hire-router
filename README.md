@@ -15,7 +15,7 @@
 ## Deliverables
 
 - A user can visit a "/" route (Dashboard) that shows a list of 50 people from 
-[https://randomuser.me/documentation](https://randomuser.me/documentation) and an empty hired list
+[https:/t/randomuser.me/documenation](https://randomuser.me/documentation) and an empty hired list
 - A user can click a link to view the person's profile
 - A user can visit a "/view/:id" route to view a person's profile
 - When a user clicks "Hire" they should be redirected to the dashboard AND see the person they've hired in the hired column
